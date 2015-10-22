@@ -35,7 +35,7 @@ class ExcelServiceProvider implements ServiceProviderInterface
             
             $streamWriter = new StreamWriterWrapper('php://output');
             $streamWriter->setWriter($factory, 'save');
-            return new ExcelContainer($objPHPExcel, $streamWriter, new StreamResponse);
+            return new ExcelContainer($objPHPExcel, $streamWriter, null);
         });
     }
 
